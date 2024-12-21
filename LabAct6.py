@@ -1,1 +1,4 @@
-import tkinter
+import tkinter as tk
+from tkinter import *
+from PIL import Image, ImageTk
+
