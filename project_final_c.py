@@ -1,60 +1,16 @@
 import tkinter as tk
-from tkinter import *
-from PIL import Image, ImageTk
+
+from ProjectFinal import payroll_gui_design
 
 root = tk.Tk()
 root.title("Payroll")
 root.geometry('670x900')
 
-#Creating functions for the widgets design
-class gui_design ():
-    def heading_design(self, x, y, text_value):
-        self.text_value = text_value
-        self.heading = Label(text=text_value, fg='black', font=('Quicksand', 22, 'bold'))
-        self.heading.place(x=x, y=y)
+design = payroll_gui_design(root)
 
-    def textbox_design(self, x, y):
-        self.textbox = Text(width=15, height=1, fg='black', font=('Arial', 12, 'bold'))
-        self.textbox.place(x=x, y=y)
-
-    def label_design(self, x, y, text_value):
-        self.text_value = text_value
-        self.lbl = Label(text=text_value, bg='#f0f0f0', font=('Arial', 10, 'bold'))
-        self.lbl.place(x=x, y=y)
-
-    def label_design2(self, x, y, text_value):
-        self.text_value = text_value
-        self.lbl = Label(text=text_value, fg='gray27', bg='#f0f0f0', font=('Arial', 8))
-        self.lbl.place(x=x, y=y)
-
-    def image_design(self, image_location, x, y, length, width):
-        self.length = length
-        self.width = width
-        self.image_location = image_location
-        self.image = Image.open(image_location)
-        self.bck_pic = ImageTk.PhotoImage(self.image.resize((length, width)))
-        self.lbl = Label(root, image=self.bck_pic)
-        self.lbl.place(x=x, y=y)
-
-    def button_design(self, x, y, text_value, width_value, bg_value):
-        self.bg_value = bg_value
-        self.width_value = width_value
-        self.text_value = text_value
-        self.upload_button = Button(width=width_value, pady=7, text=text_value, bg=bg_value, fg='white', cursor='hand2', border=0)
-        self.upload_button.place(x=x, y=y)
-
-    def button_design2(self, x, y, text_value, width_value, bg_value):
-        self.bg_value = bg_value
-        self.width_value = width_value
-        self.text_value = text_value
-        self.upload_button = Button(width=width_value, pady=2, text=text_value, bg=bg_value, fg='white', cursor='hand2', border=0)
-        self.upload_button.place(x=x, y=y)
-
-design = gui_design()
-
-#Calling of functions for the design
 design.heading_design(170, 20, "PALADAN'S PAYROLL")
 
+#Call for the designs of the payroll page to create the GUI
 design.label_design(20, 80, "EMPLOYEE BASIC INFO:")
 design.image_design("C:\\Users\\NewPC\\Downloads\\9a56bf4fb9dfbd75aa0f91b62840f3fa.jpg", 25, 100, 160, 160)
 design.label_design2(30, 270, 'Employee Number:')

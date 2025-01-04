@@ -1,0 +1,40 @@
+START
+
+1. SETUP Main Application
+    - IMPORT tkinter, PIL, ttk
+    - INITIALIZE a Tkinter root window
+
+2. CREATE Separate GUI Class Files
+    - DEFINE `login_page_gui_design` class
+        - ADD methods for headings, labels, textboxes, and buttons
+    - DEFINE `employee_reg_gui_design` class
+        - ADD methods for frames, images, and comboboxes
+    - DEFINE `user_acc_gui_design` class
+        - ADD methods for combo fields, buttons, and images
+    - DEFINE `payroll_gui_design` class
+        - ADD methods for labels, textboxes, and frames
+
+3. IMPORT Classes into Specific GUI Files
+    - IMPORT `login_page_gui_design` in `project_final_a`
+    - IMPORT `employee_reg_gui_design` in `project_final_b.py`
+    - IMPORT `user_acc_gui_design` in `project_final_d.py`
+    - IMPORT `payroll_gui_design` in `project_final_c`
+
+4. DESIGN GUI Pages
+    - IN `project_final_a.py`:
+        - INITIALIZE `login_page_gui_design`
+        - CALL methods to create headings, labels, textboxes, and buttons
+    - IN `project_final_b.py`:
+        - INITIALIZE `employee_reg_gui_design`
+        - CALL methods to create frames, textboxes, labels, and buttons
+    - IN `project_final_d.py`:
+        - INITIALIZE `user_acc_gui_design`
+        - CALL methods to create combo fields and images
+    - IN `project_final_c.py`:
+        - INITIALIZE `payroll_gui_design`
+        - CALL methods to create labels, images, and buttons
+
+5. RUN Main Application
+    - CALL `mainloop` in the main application file
+
+END
